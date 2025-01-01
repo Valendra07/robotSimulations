@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 
 robot_numbers = 6
-T = 1000 # Number of frames
+T = 100 # Number of frames
 dt = 0.1 # Time Step (sec)
 time_steps = np.arange(0,T*dt,dt) # From 0(including) to T*dt(excluding) = Total Time with step = 0.1
 # print(time_steps)
@@ -19,7 +19,8 @@ time_steps = np.arange(0,T*dt,dt) # From 0(including) to T*dt(excluding) = Total
 # .
 # robot6                                  z6(99.9)
 z = np.zeros((robot_numbers, T), dtype=complex)
-z[:,0] = np.array([20 + 40j, 80 + 40j, 40 + 20j, 40 + 80j, 60 + 20j, 60 + 80j])# Initial position of robots at t=0 sec.
+z[:,0] = np.array([10+55j, 40+85j, 75+60j, 80+35j, 55+20j, 25+20j])# Initial position of robots at t=0 sec.
+
 # U matrix for 6 points
 U = np.zeros((robot_numbers, robot_numbers), dtype=int)
 
